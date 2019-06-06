@@ -109,3 +109,7 @@ class MinStack {
     }
 }
 ```
+
+### 4. increasing stack
+LC1063 & QUORA interview
+- we only need to track the items that are increasing in some case.
