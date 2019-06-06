@@ -31,3 +31,31 @@ public int kthSmallest(int[][] matrix, int k) {
         return ret;
     }
 ```
+
+##1.2 
+1060. Missing Element in Sorted Array
+
+```
+class Solution {
+    public int missingElement(int[] nums, int k) {
+        int n = nums.length;
+        int numMissing = nums[n-1] - nums[0] - n + 1;
+        if(k > numMissing) {
+            //we return upper bound number 
+            return nums[n-1] + (k - numMissing);
+        }
+        int l = 0, r = n-1;
+        while(l < r-1) {
+            int mid = l + (r-l)/2;
+            int missing = nums[mid] - nums[l] - (mid - l);
+            if(missing < k) {
+                k -= missing;
+                l = mid;
+            }else {
+                r = mid;
+            }
+        }
+        return nums[l]+k;
+    }
+}
+```
