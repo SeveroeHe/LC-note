@@ -1,5 +1,7 @@
 ## Overview
 DP is usually used for decouple general problems into sub problems. In other words, status transition becomes crucial. We need to figure out what is the general status transition for intermediate calculations, and treat start/end as corner case and figure out the specific calculation
+Key Notes:
+1. split primary goal into sub goals. The traversing order can be either reversed or in normal order.
 
 ### 1. probabilities
 - practise: LC837 21 GAME
